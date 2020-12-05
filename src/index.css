@@ -1,3 +1,5 @@
+html { height: 100%; }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,129 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.container-form {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.topbar {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 8px 16px;
+  box-shadow:  1px 8px 10px 2px rgba(0, 0, 0, 0.2);
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+}
+
+.topbar > h1 {
+  margin: auto 0;
+}
+
+.w-100 {
+  width: 100%;
+  height: 100%;
+}
+
+.card-form-login {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 16px;
+  border: solid 2px #f8f9fa;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  box-shadow: 1px 8px 10px 2px rgba(0, 0, 0, 0.2);
+  grid-row: 4 / 8;
+}
+
+.card-form-login form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-form-login form > div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.card-form-login form > div > label {
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+.card-form-login form > div > input {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 16px;
+  border: solid 1px #c2c2c2;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.card-form-login form > div > input:focus {
+  outline: none;
+}
+
+.primary-button {
+  padding: 8px 16px;
+  background-color: orange;
+  border: 2px solid rgb(255, 165, 0);
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  background-color:  rgb(255, 185, 0);
+  border: solid 2px rgb(255, 185, 0);
+}
+
+.block-button {
+  width: 100%;
+  display: block;
+}
+
+.signup-form {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  padding: 16px;
+  border: solid 2px #f8f9fa;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  box-shadow: 1px 8px 10px 2px rgba(0, 0, 0, 0.2);
+  grid-row: 4 / 8;
+  grid-column: 1 / -1;
+}
+
+.signup-form form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }

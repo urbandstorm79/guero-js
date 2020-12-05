@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+
+// Components
+import LoginComponent from './components/LoginComponent';
+import SignUpComponent from './components/SignUpComponent';
+import TopBar from './views/MainTopBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-form">
+      <TopBar />
+     {/* <LoginComponent /> */}
+    <SignUpComponent />
     </div>
   );
 }
