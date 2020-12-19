@@ -2,17 +2,17 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 
-// Components
-import LoginComponent from './components/LoginComponent';
-import SignUpComponent from './components/SignUpComponent';
+import Routing from './routes';
 import TopBar from './views/MainTopBar';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
     <div className="container-form">
       <TopBar />
-     {/* <LoginComponent /> */}
-    <SignUpComponent />
+      <Router>
+        <Routing />
+      </Router>
     </div>
   );
 }

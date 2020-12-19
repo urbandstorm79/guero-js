@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function SignUp() {
   return (
@@ -6,7 +7,7 @@ function SignUp() {
       <form>
         <h2 className="col-12">SignUp</h2>
         <div className="col-md-6 pb-2">
-          <label for="firstName">First name</label>
+          <label htmlFor="firstName">First name</label>
           <input
             type="text"
             id="firstName"
@@ -14,7 +15,7 @@ function SignUp() {
             className="form-control" />
         </div>
         <div className="col-md-6 pb-2">
-          <label for="lastName">Last name</label>
+          <label htmlFor="lastName">Last name</label>
           <input
             type="text"
             id="lastName"
@@ -22,7 +23,7 @@ function SignUp() {
             className="form-control" />
         </div>
         <div className="col-12 pb-2">
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
@@ -30,7 +31,7 @@ function SignUp() {
             className="form-control" />
         </div>
         <div className="col-md-7 pb-2">
-          <label for="username">Username</label>
+          <label htmlFor="username">Username</label>
           <input
             type="text"
             id="email"
@@ -38,7 +39,7 @@ function SignUp() {
             className="form-control" />
         </div>
         <div className="col-md-5 pb-2">
-          <label for="pass">Password</label>
+          <label htmlFor="pass">Password</label>
           <input
             type="password"
             id="email"
@@ -47,7 +48,7 @@ function SignUp() {
         </div>
 
         <div className="col-md-6 pb-2">
-          <label for="phone">Phone number</label>
+          <label htmlFor="phone">Phone number</label>
           <input
             type="phone"
             id="phone"
@@ -56,7 +57,7 @@ function SignUp() {
         </div>
 
         <div className="col-md-6 pb-2">
-          <label for="dob">Date of birth</label>
+          <label htmlFor="dob">Date of birth</label>
           <input
             type="date"
             id="dob"
@@ -65,12 +66,12 @@ function SignUp() {
         </div>
         <div className="col-12">
         <button
-          class="primary-button block-button mt-3">
+          className="primary-button block-button mt-3">
           SignUp
         </button>
         </div>
         <div className="col-12 mt-3">
-          <p>If you don't have an account, click <a href="#">here</a></p>
+          <p>If you don't have an account, click <Link to="/">here</Link></p>
         </div>
       </form>
     </div>

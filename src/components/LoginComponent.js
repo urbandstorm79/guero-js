@@ -1,28 +1,29 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function LoginComponent() {
   let email = null;
   let password = null;
   return (
-    <div class="card-form-login">
+    <div className="card-form-login">
         <h2>Login</h2>
           <form>
             <div>
-              <label for="email">Email</label>
-              <input id="email" placeholder="Please enter your email" type="email" value={email}/>
+              <label htmlFor="email">Email</label>
+              <input id="email" placeholder="Please enter your email" type="email"/>
             </div>
             <div>
-              <label for="password">Password</label>
-              <input id="password" placeholder="Please enter your password" type="password" value={password}/>
+              <label htmlFor="password">Password</label>
+              <input id="password" placeholder="Please enter your password" type="password"/>
             </div>
             <div>
               <button
-                class="primary-button block-button"
+                className="primary-button block-button"
                 onClick={validateLogin(email, password)}>
                   Login
               </button>
             </div>
-            <p>If you don't have an account, click <a href="#">here</a></p>
+            <p>If you don't have an account, click <Link to="signup">here</Link></p>
           </form>
       </div>
   );
